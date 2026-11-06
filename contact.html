@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ & Đóng Góp Ý Kiến - SoundWave Support & Studio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Đầu trang & Thanh điều hướng -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="SoundWave Home">
+        <div class="brand-icon"><i class="fa-solid fa-wave-square"></i></div>
+        <span>Sound<span>Wave</span></span>
+      </a>
+
+      <nav aria-label="Điều hướng chính">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+          <li><a href="search.html" class="nav-link">Tìm Kiếm</a></li>
+          <li><a href="artist-songs.html" class="nav-link">Ca Sĩ</a></li>
+          <li><a href="composer-songs.html" class="nav-link">Nhạc Sĩ</a></li>
+          <li><a href="album-songs.html" class="nav-link">Album</a></li>
+          <li><a href="detail.html" class="nav-link">Tin Tức</a></li>
+          <li><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+          <li><a href="contact.html" class="nav-link active">Liên Hệ</a></li>
+          <li><a href="policy-terms.html" class="nav-link">Chính Sách</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search-btn" title="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="index.html#pricing" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">Premium</a>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nội dung chính của trang -->
+  <main class="section-spacing">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 48px;">
+        <span class="badge badge-primary"><i class="fa-solid fa-headset"></i> Trung Tâm Kết Nối</span>
+        <h1 class="hero-title" style="margin-top: 12px; font-size: 2.3rem;">Liên Hệ & Hợp Tác Nghệ Sĩ</h1>
+        <p class="hero-desc" style="margin: 0 auto;">
+          Bạn là nghệ sĩ Indie muốn phát hành ca khúc độc quyền, hoặc người nghe muốn đóng góp ý kiến cải tiến SoundWave? Hãy gửi thông điệp cho chúng tôi!
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Biểu mẫu gửi thông tin liên hệ -->
+        <section class="contact-form-wrap">
+          <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">Gửi Tin Nhắn Trực Tuyến</h2>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px;">
+            Đội ngũ hỗ trợ của SoundWave sẽ phản hồi qua email của bạn trong vòng 24 giờ làm việc.
+          </p>
+
+          <!-- Thông báo hiển thị khi gửi biểu mẫu thành công -->
+          <div id="contact-feedback" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-green); color: var(--accent-green); padding: 14px 18px; border-radius: var(--radius-sm); margin-bottom: 20px; font-size: 0.9rem;">
+            <i class="fa-solid fa-circle-check"></i> Cảm ơn bạn! Thông tin liên hệ đã được gửi thành công đến ban quản trị SoundWave.
+          </div>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Họ và tên của bạn <span style="color: var(--accent-pink);">*</span></label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" required>
+            </div>
+
+            <div class="grid-2" style="gap: 16px; margin-bottom: 20px;">
+              <div>
+                <label for="contact-email" class="form-label">Địa chỉ Email <span style="color: var(--accent-pink);">*</span></label>
+                <input type="email" id="contact-email" class="form-control" placeholder="name@example.com" required>
+              </div>
+
+              <div>
+                <label for="contact-phone" class="form-label">Số điện thoại liên hệ</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="0900 123 456">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Mục đích liên hệ <span style="color: var(--accent-pink);">*</span></label>
+              <select id="contact-subject" class="form-control" style="cursor: pointer;" required>
+                <option value="">-- Vui lòng chọn chủ đề --</option>
+                <option value="artist">Đăng ký phát hành bài hát dành cho Nghệ sĩ Indie</option>
+                <option value="copyright">Báo cáo vi phạm bản quyền tác giả (DMCA)</option>
+                <option value="premium">Hỗ trợ thanh toán & Gói cước Premium</option>
+                <option value="feedback">Góp ý cải tiến giao diện & trải nghiệm ứng dụng</option>
+                <option value="other">Hợp tác truyền thông & Sự kiện âm nhạc</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Nội dung chi tiết <span style="color: var(--accent-pink);">*</span></label>
+              <textarea id="contact-message" class="form-control" placeholder="Nhập nội dung bạn muốn chia sẻ cùng SoundWave..." required></textarea>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+              <input type="checkbox" id="agree-policy" required style="accent-color: var(--primary); cursor: pointer;">
+              <label for="agree-policy" style="font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+                Tôi đồng ý với <a href="policy-terms.html" style="color: var(--primary); text-decoration: underline;">Chính sách bảo mật & Điều khoản dịch vụ</a>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Gửi Tin Nhắn Ngay
+            </button>
+          </form>
+        </section>
+
+        <!-- Thông tin địa chỉ phòng thu & Bản đồ Google Maps -->
+        <section class="contact-info-cards">
+          <div class="contact-box">
+            <div class="contact-box-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 4px;">Trụ Sở & Phòng Thu Studio</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">
+                Tầng 8, Tòa nhà FPT Tower, Số 10 Phạm Văn Bạch, Cầu Giấy, Hà Nội.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="contact-box-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 4px;">Hotline Trực Tuyến</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">
+                Tổng đài hỗ trợ 24/7: <strong>1900 8888</strong> (1.000đ/phút)<br>
+                Email hỗ trợ: <strong>support@soundwave.vn</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- Bản đồ Google Maps nhúng trực tiếp -->
+          <div class="map-embed">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096956272372!2d105.78184467596953!3d21.02880628777498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9f61%3A0x7720e5aab625902!2zVMOyYSBuaMOgIEZQVCBUb3dlcg!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Bản đồ chỉ đường đến Studio SoundWave">
+            </iframe>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Chân trang -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-wave-square"></i></div>
+            <span>Sound<span>Wave</span></span>
+          </a>
+          <p>Nền tảng âm nhạc trực tuyến kết nối triệu trái tim yêu nghệ thuật với các nghệ sĩ độc lập trên toàn quốc.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Khám Phá</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="search.html">Tìm Kiếm Bài Hát</a></li>
+            <li><a href="album-songs.html">Kho Album Hot</a></li>
+            <li><a href="detail.html">Tin Tức & Review</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Nghệ Sĩ & Nhạc Sĩ</h4>
+          <ul class="footer-links-list">
+            <li><a href="artist-songs.html">Hồ Sơ Ca Sĩ</a></li>
+            <li><a href="composer-songs.html">Kho Nhạc Sĩ</a></li>
+            <li><a href="contact.html">Đăng Ký Nghệ Sĩ Mới</a></li>
+            <li><a href="about.html">Cộng Đồng Indie</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Hỗ Trợ & Pháp Lý</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">Về Chúng Tôi</a></li>
+            <li><a href="contact.html">Liên Hệ Hỗ Trợ</a></li>
+            <li><a href="policy-terms.html">Bản Quyền & DMCA</a></li>
+            <li><a href="policy-terms.html#privacy">Chính Sách Bảo Mật</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SoundWave Music Platform. Bản quyền thuộc về FPT Aptech - Dự án Thiết kế Web Frontend.</p>
+        <div class="social-links">
+          <a href="https://facebook.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://youtube.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://tiktok.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://github.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Thanh phát nhạc cố định đáy màn hình -->
+  <aside class="bottom-player-bar" aria-label="Trình phát nhạc đang hoạt động">
+    <div class="player-left">
+      <img id="player-thumb" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200" alt="Bìa bài hát" class="player-thumb">
+      <div class="player-song-meta">
+        <a href="song-detail.html" id="player-song-title" class="player-song-name">Đường Tôi Chở Em Về</a>
+        <a href="artist-songs.html" id="player-artist" class="player-artist-name">Bùi Trường Linh</a>
+      </div>
+      <button id="player-like-btn" class="player-like-btn" title="Thêm vào yêu thích">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+    </div>
+
+    <div class="player-center">
+      <div class="player-controls-row">
+        <button class="player-btn-action" title="Phát ngẫu nhiên"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="player-btn-action" title="Bài trước"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="player-play-btn" class="player-btn-play-pause" title="Phát"><i class="fa-solid fa-play"></i></button>
+        <button class="player-btn-action" title="Bài tiếp"><i class="fa-solid fa-forward-step"></i></button>
+        <button class="player-btn-action" title="Lặp lại"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+      <div class="player-progress-row">
+        <span id="current-time" class="player-time">01:24</span>
+        <div id="progress-bar-wrap" class="progress-bar-wrap">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <span id="duration-time" class="player-time">03:45</span>
+      </div>
+    </div>
+
+    <div class="player-right">
+      <a href="song-detail.html" class="player-btn-action" title="Xem lời bài hát"><i class="fa-solid fa-align-left"></i></a>
+      <div class="volume-wrap">
+        <i class="fa-solid fa-volume-high text-muted"></i>
+        <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Âm lượng">
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
