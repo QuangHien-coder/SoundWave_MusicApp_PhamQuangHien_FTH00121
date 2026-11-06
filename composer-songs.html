@@ -1,335 +1,203 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nhạc Sĩ Bùi Trường Linh & Dàn Singer-Songwriter Gen Z | SoundWave</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundWave - Bài Hát Theo Nhạc Sĩ</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Đầu trang & Thanh điều hướng -->
-  <header class="site-header">
-    <div class="container navbar">
-      <a href="index.html" class="brand-logo" aria-label="SoundWave Home">
-        <div class="brand-icon"><i class="fa-solid fa-wave-square"></i></div>
-        <span>Sound<span>Wave</span></span>
-      </a>
-
-      <nav aria-label="Điều hướng chính">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
-          <li><a href="search.html" class="nav-link">Tìm Kiếm</a></li>
-          <li><a href="artist-songs.html" class="nav-link">Ca Sĩ</a></li>
-          <li><a href="composer-songs.html" class="nav-link active">Nhạc Sĩ</a></li>
-          <li><a href="album-songs.html" class="nav-link">Album</a></li>
-          <li><a href="detail.html" class="nav-link">Tin Tức</a></li>
-          <li><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
-          <li><a href="contact.html" class="nav-link">Liên Hệ</a></li>
-          <li><a href="policy-terms.html" class="nav-link">Chính Sách</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="search.html" class="nav-search-btn" title="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="index.html#pricing" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">Premium</a>
-        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Nội dung chính của trang -->
-  <main class="section-spacing">
-    <div class="container">
-      <!-- Thông tin hồ sơ nhạc sĩ sáng tác -->
-      <section class="profile-header-banner">
-        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600" alt="Nhạc sĩ Bùi Trường Linh" class="profile-avatar-lg">
-
-        <div class="profile-info">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span class="badge badge-emerald"><i class="fa-solid fa-award"></i> Singer - Songwriter Xuất Sắc</span>
-            <span class="badge badge-primary">Indie / Ballad / R&B Melodic</span>
-          </div>
-          
-          <h1 class="profile-name">Bùi Trường Linh & Thế Hệ Tác Giả Trẻ</h1>
-          <p class="profile-bio">
-            Bùi Trường Linh (buitruonglinh) cùng những tác giả trẻ như CoolKid, Dangrangto, Fishy đại diện cho thế hệ nghệ sĩ đa năng vừa tự sáng tác, hòa âm phối khí vừa trực tiếp thể hiện ca khúc. Âm nhạc của họ mang đậm hơi thở đời sống giới trẻ, kết hợp giữa giai điệu Ballad trữ tình và dòng chảy R&B / Rap Melodic bắt tai.
-          </p>
-
-          <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 14px 20px; margin: 10px 0;">
-            <strong style="color: var(--secondary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;"><i class="fa-solid fa-trophy"></i> Dấu Ấn Sáng Tác & Giải Thưởng:</strong>
-            <p style="font-size: 0.875rem; color: #cbd5e1; margin-top: 4px;">
-              • Top 1 Trending YouTube & Spotify Vietnam ("Đường Tôi Chở Em Về", "Quá Đủ Rồi", "Xương Rồng").<br>
-              • Á quân chương trình Big Song Big Deal - Bài hát hay nhất.<br>
-              • Hơn 200 triệu lượt nghe tích lũy trên các nền tảng nhạc số và TikTok.
-            </p>
-          </div>
-
-          <div class="profile-stats-row">
-            <span><i class="fa-solid fa-pen-nib"></i> <strong>45+</strong> Tác phẩm phát hành</span>
-            <span><i class="fa-solid fa-headphones"></i> <strong>200 Triệu+</strong> Lượt stream tổng hợp</span>
-            <span><i class="fa-solid fa-microphone-lines"></i> <strong>Top Hits:</strong> Indie & Say Hi</span>
-          </div>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Sound<span>Wave</span></a>
+            <button class="nut-menu-mobile" onclick="moMenuMobile()">Menu</button>
+            <nav>
+                <ul id="menu-chinh">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="search.html">Tìm kiếm</a></li>
+                    <li><a href="song-detail.html">Chi tiết bài hát</a></li>
+                    <li><a href="artist-songs.html">Ca sĩ</a></li>
+                    <li><a href="composer-songs.html" class="active">Nhạc sĩ</a></li>
+                    <li><a href="album-songs.html">Album</a></li>
+                    <li><a href="detail.html">Tin tức</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="policy-terms.html">Chính sách</a></li>
+                </ul>
+            </nav>
         </div>
-      </section>
+    </header>
 
-      <!-- Danh mục các tác phẩm sáng tác -->
-      <section>
-        <div class="section-title-wrap">
-          <div>
-            <h2 class="section-title"><i class="fa-solid fa-scroll"></i> Gia Tài Sáng Tác Tiêu Biểu</h2>
-            <p class="section-subtitle">Danh mục các tác phẩm nổi bật cùng nghệ sĩ trực tiếp thể hiện</p>
-          </div>
-          <span style="font-size: 0.9rem; color: var(--text-dim); font-weight: 600;">Hiển thị 6 tác phẩm chọn lọc</span>
+    <main class="container">
+        <section class="thong-tin-dau-trang">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Nhạc sĩ Bùi Trường Linh" class="anh-tron-lon">
+            <div class="chi-tiet-phai">
+                <h1>Nhạc Sĩ: Bùi Trường Linh & Thế Hệ Tác Giả Trẻ</h1>
+                <p><strong>Phong cách sáng tác:</strong> Kết hợp giai điệu Pop Ballad nhẹ nhàng với Rap Melody, R&B và Indie hiện đại (cùng với CoolKid, Dangrangto, Fishy, Tinh Hà).</p>
+                <p><strong>Giải thưởng nổi bật:</strong> Top 10 Nhạc sĩ trẻ được nghe nhiều nhất năm 2025, Giải Ca khúc Indie được yêu thích nhất.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="tieu-de-muc">
+                <h2>Các Giải Thưởng Âm Nhạc</h2>
+            </div>
+            <div class="luoi-3-cot">
+                <div class="the-danh-muc">
+                    <h3>Làn Sóng Xanh 2025</h3>
+                    <p>Đề cử Gương mặt tác giả trẻ xuất sắc nhất năm</p>
+                </div>
+                <div class="the-danh-muc">
+                    <h3>Top 1 Trending</h3>
+                    <p>Ca khúc Đường Tôi Chở Em Về và Quá Đủ Rồi đạt triệu lượt nghe</p>
+                </div>
+                <div class="the-danh-muc">
+                    <h3>SoundWave Indie Award</h3>
+                    <p>Nhóm tác giả Indie & Rap có lượt tìm kiếm cao nhất</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="tieu-de-muc">
+                <h2>Gia Tài Sáng Tác (Danh Sách Tác Phẩm)</h2>
+            </div>
+            <table class="bang-nhac">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên tác phẩm</th>
+                        <th>Nhạc sĩ sáng tác</th>
+                        <th>Ca sĩ thể hiện</th>
+                        <th>Album</th>
+                        <th>Năm</th>
+                        <th>Nghe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="song-detail.html">Đường Tôi Chở Em Về</a></td>
+                        <td>Bùi Trường Linh</td>
+                        <td><a href="artist-songs.html">Bùi Trường Linh</a></td>
+                        <td><a href="album-songs.html">Từng Ngày Như Mãi Mãi</a></td>
+                        <td>2024</td>
+                        <td><button class="nut-play-nho" onclick="phatNhac('Đường Tôi Chở Em Về', 'Bùi Trường Linh', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=150')">Phát</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="song-detail.html">Quá Đủ Rồi</a></td>
+                        <td>CoolKid</td>
+                        <td><a href="artist-songs.html">CoolKid</a></td>
+                        <td><a href="album-songs.html">Quá Đủ Rồi EP</a></td>
+                        <td>2025</td>
+                        <td><button class="nut-play-nho" onclick="phatNhac('Quá Đủ Rồi', 'CoolKid', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=150')">Phát</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="song-detail.html">Xương Rồng</a></td>
+                        <td>Dangrangto</td>
+                        <td><a href="artist-songs.html">Dangrangto</a></td>
+                        <td><a href="album-songs.html">Xương Rồng Single</a></td>
+                        <td>2025</td>
+                        <td><button class="nut-play-nho" onclick="phatNhac('Xương Rồng', 'Dangrangto', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=150')">Phát</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="song-detail.html">Vết Thương</a></td>
+                        <td>Fishy</td>
+                        <td><a href="artist-songs.html">Fishy</a></td>
+                        <td><a href="album-songs.html">Vết Thương Single</a></td>
+                        <td>2025</td>
+                        <td><button class="nut-play-nho" onclick="phatNhac('Vết Thương', 'Fishy', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=150')">Phát</button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a href="song-detail.html">Thành Đô</a></td>
+                        <td>Tinh Hà</td>
+                        <td><a href="artist-songs.html">Tinh Hà (Say Hi)</a></td>
+                        <td><a href="album-songs.html">Say Hi Tuyển Tập</a></td>
+                        <td>2025</td>
+                        <td><button class="nut-play-nho" onclick="phatNhac('Thành Đô', 'Tinh Hà', 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=150')">Phát</button></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><a href="song-detail.html">Yêu Người Có Ước Mơ</a></td>
+                        <td>Bùi Trường Linh</td>
+                        <td><a href="artist-songs.html">Bùi Trường Linh</a></td>
+                        <td><a href="album-songs.html">Từng Ngày Như Mãi Mãi</a></td>
+                        <td>2024</td>
+                        <td><button class="nut-play-nho" onclick="phatNhac('Yêu Người Có Ước Mơ', 'Bùi Trường Linh', 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=150')">Phát</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4>SoundWave</h4>
+                    <p style="font-size: 13px; color: #b3b3b3;">Website nghe nhạc trực tuyến dành cho sinh viên và giới trẻ yêu âm nhạc.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Danh Mục</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="search.html">Tìm kiếm bài hát</a></li>
+                        <li><a href="album-songs.html">Danh sách Album</a></li>
+                        <li><a href="detail.html">Tin tức âm nhạc</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nghệ Sĩ</h4>
+                    <ul>
+                        <li><a href="artist-songs.html">Bài hát theo Ca sĩ</a></li>
+                        <li><a href="composer-songs.html">Bài hát theo Nhạc sĩ</a></li>
+                        <li><a href="song-detail.html">Chi tiết ca khúc</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Thông Tin</h4>
+                    <ul>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ & Góp ý</a></li>
+                        <li><a href="policy-terms.html">Chính sách & Điều khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ban-quyen">
+                <p>Bài tập lớn Thiết kế Web Frontend - Sinh viên: Phạm Quang Hiển (FTH00121) - Lớp T2608E</p>
+            </div>
         </div>
+    </footer>
 
-        <div class="table-responsive">
-          <table class="music-table">
-            <thead>
-              <tr>
-                <th style="width: 50px;">#</th>
-                <th>Tác Phẩm Sáng Tác</th>
-                <th>Ca Sĩ Trình Bày</th>
-                <th>Tác Giả</th>
-                <th>Album / EP</th>
-                <th>Lượt Nghe</th>
-                <th style="width: 70px; text-align: center;">Nghe</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="rank-number rank-top1">01</span></td>
-                <td>
-                  <div class="song-cell">
-                    <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200" alt="Đường Tôi Chở Em Về" class="song-thumb-sm">
-                    <div class="song-info-meta">
-                      <a href="song-detail.html" class="song-title-text">Đường Tôi Chở Em Về</a>
-                      <span class="song-artist-text">Thể loại: Indie Ballad thanh xuân</span>
-                    </div>
-                  </div>
-                </td>
-                <td><a href="artist-songs.html" style="font-weight: 700; color: var(--secondary);">Bùi Trường Linh</a></td>
-                <td>Bùi Trường Linh</td>
-                <td><a href="album-songs.html">Từng Ngày Như Mãi Mãi</a></td>
-                <td>4.120.300</td>
-                <td style="text-align: center;">
-                  <button class="btn-play-sm js-play-track" data-title="Đường Tôi Chở Em Về" data-artist="Bùi Trường Linh" data-thumb="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><span class="rank-number rank-top2">02</span></td>
-                <td>
-                  <div class="song-cell">
-                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200" alt="Quá Đủ Rồi" class="song-thumb-sm">
-                    <div class="song-info-meta">
-                      <a href="song-detail.html" class="song-title-text">Quá Đủ Rồi</a>
-                      <span class="song-artist-text">Thể loại: R&B / Melodic sâu lắng</span>
-                    </div>
-                  </div>
-                </td>
-                <td><a href="artist-songs.html" style="font-weight: 700; color: var(--secondary);">CoolKid</a></td>
-                <td>CoolKid</td>
-                <td><a href="album-songs.html">DG House Session</a></td>
-                <td>3.420.800</td>
-                <td style="text-align: center;">
-                  <button class="btn-play-sm js-play-track" data-title="Quá Đủ Rồi" data-artist="CoolKid" data-thumb="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><span class="rank-number rank-top3">03</span></td>
-                <td>
-                  <div class="song-cell">
-                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200" alt="Xương Rồng" class="song-thumb-sm">
-                    <div class="song-info-meta">
-                      <a href="song-detail.html" class="song-title-text">Xương Rồng</a>
-                      <span class="song-artist-text">Thể loại: Rap Melodic hiện đại</span>
-                    </div>
-                  </div>
-                </td>
-                <td><a href="artist-songs.html" style="font-weight: 700; color: var(--secondary);">Dangrangto</a></td>
-                <td>Dangrangto</td>
-                <td><a href="album-songs.html">Rap & Melodic Vibes</a></td>
-                <td>2.950.410</td>
-                <td style="text-align: center;">
-                  <button class="btn-play-sm js-play-track" data-title="Xương Rồng" data-artist="Dangrangto" data-thumb="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><span class="rank-number">04</span></td>
-                <td>
-                  <div class="song-cell">
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=200" alt="Vết Thương" class="song-thumb-sm">
-                    <div class="song-info-meta">
-                      <a href="song-detail.html" class="song-title-text">Vết Thương</a>
-                      <span class="song-artist-text">Thể loại: Indie Pop tâm trạng</span>
-                    </div>
-                  </div>
-                </td>
-                <td><a href="artist-songs.html" style="font-weight: 700; color: var(--secondary);">Fishy</a></td>
-                <td>Fishy</td>
-                <td><a href="album-songs.html">Chữa Lành Đêm Khuya</a></td>
-                <td>2.680.900</td>
-                <td style="text-align: center;">
-                  <button class="btn-play-sm js-play-track" data-title="Vết Thương" data-artist="Fishy" data-thumb="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=200">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><span class="rank-number">05</span></td>
-                <td>
-                  <div class="song-cell">
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=200" alt="Thành Đô" class="song-thumb-sm">
-                    <div class="song-info-meta">
-                      <a href="song-detail.html" class="song-title-text">Thành Đô (Tinh Hà)</a>
-                      <span class="song-artist-text">Thể loại: Acoustic du ca</span>
-                    </div>
-                  </div>
-                </td>
-                <td><a href="artist-songs.html" style="font-weight: 700; color: var(--secondary);">Tinh Hà</a></td>
-                <td>Triệu Lôi / Tinh Hà</td>
-                <td><a href="album-songs.html">Khúc Nhạc Tinh Hà</a></td>
-                <td>2.150.640</td>
-                <td style="text-align: center;">
-                  <button class="btn-play-sm js-play-track" data-title="Thành Đô" data-artist="Tinh Hà" data-thumb="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=200">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><span class="rank-number">06</span></td>
-                <td>
-                  <div class="song-cell">
-                    <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=200" alt="Yêu Người Có Ước Mơ" class="song-thumb-sm">
-                    <div class="song-info-meta">
-                      <a href="song-detail.html" class="song-title-text">Yêu Người Có Ước Mơ</a>
-                      <span class="song-artist-text">Thể loại: Pop Ballad tự sự</span>
-                    </div>
-                  </div>
-                </td>
-                <td><a href="artist-songs.html" style="font-weight: 700; color: var(--secondary);">Bùi Trường Linh</a></td>
-                <td>Bùi Trường Linh</td>
-                <td><a href="album-songs.html">Từng Ngày Như Mãi Mãi</a></td>
-                <td>3.850.400</td>
-                <td style="text-align: center;">
-                  <button class="btn-play-sm js-play-track" data-title="Yêu Người Có Ước Mơ" data-artist="Bùi Trường Linh" data-thumb="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=200">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <aside class="thanh-nhac-day">
+        <div class="player-trai">
+            <img id="player-anh" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=150" alt="Ảnh bài hát">
+            <div>
+                <div><a href="song-detail.html" id="player-ten-bai" style="font-weight: bold; font-size: 14px;">Đường Tôi Chở Em Về</a></div>
+                <div><a href="artist-songs.html" id="player-ca-si" style="font-size: 12px; color: #b3b3b3;">Bùi Trường Linh</a></div>
+            </div>
         </div>
-      </section>
-    </div>
-  </main>
-
-  <!-- Chân trang -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="brand-logo">
-            <div class="brand-icon"><i class="fa-solid fa-wave-square"></i></div>
-            <span>Sound<span>Wave</span></span>
-          </a>
-          <p>Nền tảng âm nhạc trực tuyến kết nối triệu trái tim yêu nghệ thuật với các nghệ sĩ độc lập trên toàn quốc.</p>
+        <div class="player-giua">
+            <div class="cum-nut-player">
+                <button onclick="phatNhac('Quá Đủ Rồi', 'CoolKid', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=150')">Bài trước</button>
+                <button id="nut-play-chinh" class="nut-chinh" onclick="bamNutPlay()">Phát nhạc</button>
+                <button onclick="phatNhac('Xương Rồng', 'Dangrangto', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=150')">Bài tiếp</button>
+            </div>
+            <div class="thanh-tien-trinh-box">
+                <span id="thoi-gian-chay">00:45</span>
+                <input type="range" id="thanh-tien-trinh" class="thanh-am-luong" min="0" max="225" value="45">
+                <span>03:45</span>
+            </div>
         </div>
-
-        <div>
-          <h4 class="footer-heading">Khám Phá</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html">Trang Chủ</a></li>
-            <li><a href="search.html">Tìm Kiếm Bài Hát</a></li>
-            <li><a href="album-songs.html">Kho Album Hot</a></li>
-            <li><a href="detail.html">Tin Tức & Review</a></li>
-          </ul>
+        <div class="player-phai">
+            <a href="song-detail.html">[Xem lời bài hát]</a>
         </div>
+    </aside>
 
-        <div>
-          <h4 class="footer-heading">Nghệ Sĩ & Nhạc Sĩ</h4>
-          <ul class="footer-links-list">
-            <li><a href="artist-songs.html">Hồ Sơ Ca Sĩ</a></li>
-            <li><a href="composer-songs.html">Kho Nhạc Sĩ</a></li>
-            <li><a href="contact.html">Đăng Ký Nghệ Sĩ Mới</a></li>
-            <li><a href="about.html">Cộng Đồng Indie</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-heading">Hỗ Trợ & Pháp Lý</h4>
-          <ul class="footer-links-list">
-            <li><a href="about.html">Về Chúng Tôi</a></li>
-            <li><a href="contact.html">Liên Hệ Hỗ Trợ</a></li>
-            <li><a href="policy-terms.html">Bản Quyền & DMCA</a></li>
-            <li><a href="policy-terms.html#privacy">Chính Sách Bảo Mật</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 SoundWave Music Platform. Bản quyền thuộc về FPT Aptech - Dự án Thiết kế Web Frontend.</p>
-        <div class="social-links">
-          <a href="https://facebook.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://youtube.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://tiktok.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://github.com" class="social-icon" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Thanh phát nhạc cố định đáy màn hình -->
-  <aside class="bottom-player-bar" aria-label="Trình phát nhạc đang hoạt động">
-    <div class="player-left">
-      <img id="player-thumb" src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200" alt="Bìa bài hát" class="player-thumb">
-      <div class="player-song-meta">
-        <a href="song-detail.html" id="player-song-title" class="player-song-name">Đường Tôi Chở Em Về</a>
-        <a href="artist-songs.html" id="player-artist" class="player-artist-name">Bùi Trường Linh</a>
-      </div>
-      <button id="player-like-btn" class="player-like-btn" title="Thêm vào yêu thích">
-        <i class="fa-regular fa-heart"></i>
-      </button>
-    </div>
-
-    <div class="player-center">
-      <div class="player-controls-row">
-        <button class="player-btn-action" title="Phát ngẫu nhiên"><i class="fa-solid fa-shuffle"></i></button>
-        <button class="player-btn-action" title="Bài trước"><i class="fa-solid fa-backward-step"></i></button>
-        <button id="player-play-btn" class="player-btn-play-pause" title="Phát"><i class="fa-solid fa-play"></i></button>
-        <button class="player-btn-action" title="Bài tiếp"><i class="fa-solid fa-forward-step"></i></button>
-        <button class="player-btn-action" title="Lặp lại"><i class="fa-solid fa-repeat"></i></button>
-      </div>
-      <div class="player-progress-row">
-        <span id="current-time" class="player-time">01:24</span>
-        <div id="progress-bar-wrap" class="progress-bar-wrap">
-          <div id="progress-fill" class="progress-fill"></div>
-        </div>
-        <span id="duration-time" class="player-time">04:25</span>
-      </div>
-    </div>
-
-    <div class="player-right">
-      <a href="song-detail.html" class="player-btn-action" title="Xem lời bài hát"><i class="fa-solid fa-align-left"></i></a>
-      <div class="volume-wrap">
-        <i class="fa-solid fa-volume-high text-muted"></i>
-        <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Âm lượng">
-      </div>
-    </div>
-  </aside>
-
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
